@@ -1,0 +1,3057 @@
+/*----------
+
+Theme Name: Slim Yog - Responsive HTML5 Template
+Theme Version: 1.0
+
+----------*/
+
+
+/*====================
+<-----Index----->
+1.Common CSS
+2.Loader CSS
+3.Header CSS
+4.Main Banner CSS
+5.Membership CSS
+6.About Us CSS
+7.Good Health CSS
+8.Counter CSS
+9.Our Classes CSS
+10.Benefits CSS
+11.Gallery CSS
+12.Team CSS
+13.Testimonial CSS
+14.News CSS
+15.News Letter CSS
+16.Footer CSS
+17.Scroll To Top CSS
+18.Responsive CSS
+====================*/
+
+
+/*==========Common CSS Start==========*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--body-font);
+}
+
+input,
+input:focus,
+button,
+button:focus {
+    outline: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+dl,
+ol,
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --primary-color: #136b16;
+    --secondary-color: #66FCF1;
+    --white-color: #494b68;
+    --black-color: #000000;
+    --sub-color: #030303;
+    --box-shadow: #B6A19E;
+    --body-font: 'Montserrat', sans-serif;
+    --title-font: 'Rubik', sans-serif;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+a:hover {
+    color: initial;
+}
+
+.for-des {
+    display: block !important;
+}
+
+.for-mob {
+    display: none !important;
+}
+
+.sec-wp {
+    position: relative;
+    z-index: 4;
+}
+
+.custom-logo-link {
+    display: inline-block;
+}
+
+p {
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--sub-color);
+    margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: var(--title-font);
+}
+
+.h1-title {
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    color: var(--white-color);
+}
+
+.h2-title {
+    font-size: 36px;
+    color: var(--primary-color);
+    line-height: 43px;
+    margin-bottom: 19px;
+    text-transform: uppercase;
+}
+
+.h3-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.h4-title {
+    position: relative;
+    font-family: var(--body-font);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 2px;
+    padding-left: 40px;
+    display: inline-block;
+}
+
+.h4-title::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    background: var(--primary-color);
+}
+
+.h4-title::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 50%;
+    right: -40px;
+    transform: translate(0, -50%);
+    background: var(--primary-color);
+}
+
+.form-input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid rgba(48, 95, 99, 0.50);
+    outline: none !important;
+    padding: 0 30px;
+    color: var(--primary-color);
+    line-height: 30px;
+    font-size: 16px;
+    background: transparent;
+    
+    border-radius: 30px;
+}
+
+textarea.form-input {
+    height: 140px;
+    resize: none;
+    padding: 21px 30px;
+}
+
+.form-element {
+    position: relative;
+}
+
+.form-element.calender img {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    right: 32px;
+    pointer-events: none;
+}
+
+.form-control-wrap {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.form-input::placeholder {
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.submit-btn {
+    text-align: left;
+}
+
+.sec-btn {
+    width: 170px;
+    height: 46px;
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 5px 5px 0 rgba(226, 149, 6, 0.50);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+   
+    font-size: 16px;
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none !important;
+    transition: .3s;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sec-btn:hover {
+    color: var(--white-color);
+    box-shadow: unset;
+}
+
+.white-btn.sec-btn {
+    background: var(--white-color);
+    box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.50);
+    color: var(--primary-color);
+    border: 1px solid var(--white-color);
+}
+
+.white-btn.sec-btn:hover {
+    box-shadow: unset;
+}
+
+.sec-btn.lg-btn {
+    width: 230px;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 5px 5px 0 rgba(48, 95, 99, 0.50);
+}
+
+.sec-btn.lg-btn:hover {
+    box-shadow: unset;
+}
+
+.slick-dots {
+    bottom: -38px;
+    text-align: center;
+    left: 8px;
+}
+
+.slick-dots li {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+    transition: .3s;
+}
+
+.slick-dots li button {
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    padding: 0;
+    border-radius: 50%;
+    opacity: 0.65;
+    position: relative;
+    transition: 0.5s;
+}
+
+.slick-dots li.slick-active button,
+.slick-dots li button:hover {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+}
+
+.slick-dots li button:hover {
+    width: 20px;
+    height: 20px;
+}
+
+.slick-dots li.slick-active {
+    margin-right: 13px;
+}
+
+.slick-dots li.slick-active:hover button {
+    width: 25px;
+    height: 25px;
+}
+
+.slick-dots li button:before {
+    display: none;
+}
+
+.slick-initialized .slick-slide {
+    outline: none !important;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border: none !important;
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
+    outline: none !important;
+    background: var(--white-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.3s;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slick-arrow::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: .3s;
+    z-index: -1;
+}
+
+.slick-arrow:hover::before {
+    transform: scale(0.9);
+}
+
+.slick-arrow.next-arrow {
+    right: 0;
+    left: auto;
+}
+
+.slick-arrow:hover::before {
+    top: 0;
+}
+
+.overflow-text {
+    height: 160px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.overflow-text::-webkit-scrollbar {
+    width: 3px;
+    background: var(--secondary-color);
+}
+
+.overflow-text::-webkit-scrollbar-thumb {
+    width: 3px;
+    background: var(--primary-color);
+}
+
+.back-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*==========Common CSS End==========*/
+
+
+/*==========Loader CSS Start==========*/
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--sub-color);
+    z-index: 500;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner-1 {
+    opacity: 0.4;
+    animation: wave1 4s infinite;
+}
+
+@keyframes wave1 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(226, 149, 6, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 30px transparent;
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+}
+
+.spinner-2 {
+    opacity: 0.6;
+    animation: wave2 4s infinite;
+}
+
+@keyframes wave2 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(226, 149, 6, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 50px transparent;
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+}
+
+.spinner-2 {
+    opacity: 0.8;
+    animation: wave3 4s infinite;
+}
+
+@keyframes wave3 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(226, 149, 6, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 70px transparent;
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+}
+
+
+/*==========Loader CSS End==========*/
+
+
+/*==========Header CSS Start==========*/
+/*.nav-menu ul li.link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 15px;
+    margin:0 25px;
+
+}
+
+.link:hover,.active{
+    border-bottom:2px solid #8f1c1c;
+}
+    */
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 25px;
+    left: 0;
+    background: transparent;
+    z-index: 99;
+    transition: .3s;
+}
+
+.site-header.sticky-head {
+    top: 0;
+}
+
+.header-top {
+    position: relative;
+    transition: .3s;
+}
+
+.header-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    width: calc(100% + 30px);
+    height: 100px;
+}
+
+.site-header.sticky-head .header-top::before {
+    border-radius: 0 0 10px 10px;
+}
+
+.site-logo {
+    width: 90px;
+    height:47px;
+    display: flex;
+    
+    justify-content: center;
+    transition: .3s;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.main-navigation {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.main-navigation li {
+    display: inline-block;
+   
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.main-navigation li a {
+    display: flex;
+    transition: .3s;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    padding: 38px 0;
+    z-index: 1;
+}
+
+.main-navigation li:hover a {
+    color: var(--white-color);
+    -webkit-text-stroke: 1px;
+}
+
+.main-navigation li.active a {
+    -webkit-text-stroke: 1px;
+    color: var(--white-color);
+}
+
+.main-navigation li.active:hover::before {
+    top: 0;
+}
+
+.main-navigation li.active:hover::after {
+    opacity: 1;
+}
+
+.main-navigation li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    top: -100%;
+    left: 0;
+    opacity: 0.8;
+    transition: 0.8s;
+}
+
+.main-navigation li.active::before {
+    top: 0;
+    opacity: 1;
+}
+
+.main-navigation li:hover::before {
+    top: 100%;
+}
+
+.main-navigation li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.4s;
+}
+
+.main-navigation li:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+*/
+
+/*==========Header CSS End==========*/
+
+
+/*==========Main Banner CSS Start==========*/
+
+.main-banner {
+    position: relative;
+    padding: 111px 0 96px 0;
+    background-attachment: fixed;
+}
+
+.main-banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+}
+
+.banner-text-wp {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.banner-slider .slick-active .banner-text-wp {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.banner-text-wp .h1-title span {
+    color: var(--secondary-color);
+}
+
+.banner-btn .sec-btn+.sec-btn {
+    margin-left: 27px;
+}
+
+.banner-img {
+    position: relative;
+    width: 538px;
+    height: 764px;
+    top: -108px;
+    left: 115px;
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.banner-img img {
+    width: 100%;
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+    transform: scale(1.3);
+}
+
+.banner-slider .slick-active .banner-img img {
+    transform: scale(1);
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.banner-slider .slick-list {
+    padding-top: 110px;
+}
+
+.banner-slider-wp {
+    position: relative;
+}
+
+.banner-slider-wp::after {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    background: var(--white-color);
+    opacity: 0.2;
+    top: 50%;
+    right: -203px;
+    transform: translate(0, -50%);
+    z-index: -1;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-slider .slick-arrow.prev-arrow {
+    left: 30px;
+}
+
+.banner-slider .slick-arrow.next-arrow {
+    right: 30px;
+}
+
+
+/*==========Main Banner CSS End==========*/
+
+
+/*==========Membership CSS Start==========*/
+
+.member-text-wp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    background: var(--white-color);
+    padding: 0 100px;
+    height: 100px;
+    margin-top: -50px;
+}
+
+.member-text-wp p {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.member-text-wp p span {
+    color: var(--secondary-color);
+}
+
+
+/*==========Membership CSS End==========*/
+
+
+/*==========About Us CSS Start==========*/
+
+.about-us-sec {
+    padding: 100px 0;
+}
+
+.about-us-img-box-wp .about-us-img {
+    height: 300px;
+}
+
+.about-us-img-box-wp img {
+    border-radius: 30px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-us-img-box-wp .top {
+    position: relative;
+    margin-left: -70px;
+    animation: moveingElement1 1.8s linear infinite alternate;
+    z-index: 1;
+}
+
+.about-us-img-box-wp .middle {
+    position: relative;
+    margin: -190px 0 0 170px;
+    animation: moveingElement2 2s linear infinite alternate;
+}
+
+.about-us-img-box-wp .about-us-img.bottom {
+    height: 250px;
+    margin: -80px 0 0 -20px;
+    animation: moveingElement3 1.4s linear infinite alternate;
+}
+
+.about-us-text.overflow-text {
+    height: 219px;
+}
+
+@keyframes moveingElement1 {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes moveingElement2 {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes moveingElement3 {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+}
+
+
+/*==========About Us CSS End==========*/
+
+
+
+/*==========Counter CSS Start==========*/
+
+.counter-sec {
+    position: relative;
+    margin-top: -75px;
+}
+
+.counting-box-wp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+
+.counting-box {
+    width: 168px;
+    height: 121px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+.counting-box .h3-title,
+.counting-box p {
+    margin-bottom: 0;
+}
+
+.counting-box .h3-title {
+    color: var(--primary-color);
+}
+
+.counting-box p {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+
+/*==========Counter CSS End==========*/
+
+
+/*==========Our Classes CSS Start==========*/
+
+.our-classes-sec {
+    position: relative;
+    padding: 93px 0 100px 0;
+}
+
+.our-classes-sec .h2-title {
+    margin-bottom: 41px;
+}
+
+.classes-img-box-wp {
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.classes-img-wp {
+    height: 380px;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.5s;
+}
+
+.classes-box-wp:hover .classes-img-wp {
+    transform: scale(1.2);
+}
+
+.classes-img-box-wp span {
+    position: absolute;
+    background: var(--white-color);
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    padding: 3px 12px;
+    left: 10px;
+    bottom: 10px;
+}
+
+.classes-text-wp {
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 0 0 20px 20px;
+    padding: 24px 25px 30px 30px;
+}
+
+.classes-text-wp>a {
+    margin-bottom: 21px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    height: 58px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  
+    text-overflow: ellipsis;
+    transition: .3s;
+}
+
+.classes-text-wp>a:hover {
+    color: var(--primary-color);
+}
+
+.classes-text-wp>p {
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.classes-text-wp p span {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.clasees-text p {
+    margin-bottom: 30px;
+    height: 143px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+   
+    text-overflow: ellipsis;
+}
+
+.classes-box-wp {
+    margin-top: 30px;
+}
+
+.classes-box-wp.top {
+    margin-top: 0;
+}
+
+.classes-view-btn {
+    margin-top: 30px;
+}
+
+.classes-view-btn .sec-btn {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 5px 5px 0 rgba(48, 95, 99, 0.50);
+}
+
+.classes-view-btn .sec-btn:hover {
+    box-shadow: unset;
+}
+
+
+/*==========Our Classes CSS End==========*/
+
+
+/*==========Benefits CSS Start==========*/
+
+.benefits-sec-img-box {
+    position: relative;
+    padding: 230px 0;
+    background-attachment: fixed;
+}
+
+.benefits-sec-img-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.45;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.benefits-sec-img-box .h2-title {
+    color: var(--white-color);
+    margin-bottom: 21px;
+}
+
+.benfits-text-box-wp {
+    position: relative;
+    padding-bottom: 108px;
+}
+
+.benefits-single-img-wp {
+    position: relative;
+    width: 800px;
+    top: -173px;
+    left: -297px;
+}
+
+.benefits-single-img-wp::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 223px;
+    left: 25px;
+    z-index: -1;
+}
+
+.benefits-single-img-wp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.benefits-text-wp {
+    padding-top: 92px;
+    position: relative;
+}
+
+.benefits-text-wp::before {
+    content: "";
+    position: absolute;
+    width: 259px;
+    height: 153px;
+    background-image: url('../images/svg/benefits-shep-icon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 48px;
+    left: 37px;
+    opacity: 0.10;
+}
+
+.benefits-text.overflow-text {
+    height: 219px;
+    margin-bottom: 32px;
+}
+
+.healthier-box-wp li {
+    display: inline-flex;
+    margin: 0 15px;
+    width: 160px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.healthier-box-wp li:first-child {
+    margin-left: 0;
+}
+
+.healthier-box-wp li:last-child {
+    margin-right: 0;
+}
+
+.healthier-box-wp li a {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    transition: .3s;
+}
+
+.healthier-box-wp li a:hover {
+    color: var(--primary-color);
+}
+
+.healthier-icon {
+    margin-bottom: 24px;
+}
+
+.healthier-box-wp {
+    margin-bottom: 54px;
+}
+
+.healthier-box-btn .sec-btn {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+    box-shadow: 5px 5px 0 rgba(48, 95, 99, 0.50);
+}
+
+.healthier-box-btn .sec-btn:hover {
+    box-shadow: unset;
+}
+
+
+/*==========Benefits CSS End==========*/
+
+
+/*==========Gallery CSS Start==========*/
+
+.gallery-sec {
+    position: relative;
+    padding-bottom: 72px;
+}
+
+.gallery-sec .container-fluid {
+    padding: 0;
+}
+
+.gallery-img-box-wp {
+    position: relative;
+    padding: 266px 0 265px 0;
+    border-radius: 0 30px 30px 0;
+}
+
+.gallery-img-box-wp::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.80;
+    border-radius: 0 30px 30px 0;
+    background: -moz-linear-gradient(-45deg, rgba(48, 95, 99, 1) 0%, rgba(48, 95, 99, 0) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(48, 95, 99, 1) 0%, rgba(48, 95, 99, 0) 100%);
+    background: -o-linear-gradient(-45deg, rgba(48, 95, 99, 1) 0%, rgba(48, 95, 99, 0) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(48, 95, 99, 1) 0%, rgba(48, 95, 99, 0) 100%);
+    background: linear-gradient(135deg, rgba(48, 95, 99, 1) 0%, rgba(48, 95, 99, 0) 100%);
+}
+
+.gallery-box-text-wp {
+    max-width: 470px;
+    margin-left: 365px;
+}
+
+.gallery-box-text-wp .h2-title {
+    color: var(--white-color);
+}
+
+.gallery-text-wp p {
+    color: var(--white-color);
+}
+
+.gallery-text-wp.overflow-text {
+    height: 141px;
+}
+
+.image-galley {
+    height: 311px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-galley::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: var(--primary-color);
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewX(90deg);
+    transition: .3s;
+}
+
+.image-galley:hover::before {
+    transform: skewX(0deg);
+}
+
+.image-galley.big-img {
+    height: 652px;
+}
+
+.image-gallery-box {
+    padding: 60px 30px 60px 0;
+    position: relative;
+    margin-left: -130px;
+    z-index: 4;
+}
+
+.image-gallery-text p {
+    color: #E6E6E6;
+    margin-bottom: 23px;
+    height: 120px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+   
+    text-overflow: ellipsis;
+}
+
+.image-galley .hover-text {
+    padding: 0 53px 0 68px;
+    position: relative;
+    transform: translateX(100%);
+    transition: .3s;
+}
+
+.image-galley:hover .hover-text {
+    transform: translateX(0);
+}
+
+
+/*==========Gallery CSS End==========*/
+
+
+/*==========Team CSS Start==========*/
+
+.team-sec {
+    position: relative;
+    padding: 92px 0 110px 0;
+    overflow: hidden;
+}
+
+.team-sec::before {
+    content: "";
+    position: absolute;
+    width: 490px;
+    height: 490px;
+    border: 30px solid var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: moveingElement5 5s linear infinite alternate;
+    top: -112px;
+    left: -122px;
+}
+
+@keyframes moveingElement5 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    25% {
+        -webkit-transform: translate(15px, 15px);
+        transform: translate(15px, 15px);
+    }
+    50% {
+        -webkit-transform: translate(10px, 10px);
+        transform: translate(10px, 10px);
+    }
+    75% {
+        -webkit-transform: translate(15px, -10px);
+        transform: translate(15px, -10px);
+    }
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+.team-sec::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: var(--primary-color);
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+}
+
+.team-sec .h2-title {
+    margin-bottom: 72px;
+}
+
+.team-img-wp {
+    height: 400px;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.team-img-wp::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 30px 30px 0 0;
+    background: -moz-linear-gradient(top, rgba(48, 95, 99, 0.24) 0%, rgba(48, 95, 99, 0.7) 100%);
+    background: -webkit-linear-gradient(top, rgba(48, 95, 99, 0.24) 0%, rgba(48, 95, 99, 0.7) 100%);
+    background: -o-linear-gradient(top, rgba(48, 95, 99, 0.24) 0%, rgba(48, 95, 99, 0.7) 100%);
+    background: -ms-linear-gradient(top, rgba(48, 95, 99, 0.24) 0%, rgba(48, 95, 99, 0.7) 100%);
+    background: linear-gradient(to bottom, rgba(48, 95, 99, 0.24) 0%, rgba(48, 95, 99, 0.7) 100%);
+    transform-origin: bottom left;
+    transform: skewX(90deg);
+    transition: .3s;
+}
+
+.team-img-wp:hover::before {
+    transform: skewX(0);
+}
+
+.team-member-text-wp {
+    background: var(--white-color);
+    border-radius: 0 0 30px 30px;
+    box-shadow: var(--box-shadow);
+    padding: 22px 30px 21px 30px;
+    transition: .3s;
+}
+
+.team-member-text-wp h5 {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.team-member-text-wp span {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 20px;
+    min-height: 54px;
+}
+
+.team-member-text p {
+    height: 122px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+
+.scocial-icon {
+    transform: translateX(-20em);
+    transition: .3s;
+}
+
+.team-img-wp:hover .scocial-icon {
+    transform: translateX(0);
+}
+
+.scocial-icon li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.scocial-icon li:first-child {
+    margin-left: 0;
+}
+
+.scocial-icon li:last-child {
+    margin-right: 0;
+}
+
+.scocial-icon li a {
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+}
+
+.scocial-icon li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: .3s;
+    z-index: -1;
+}
+
+.scocial-icon li:hover a::before {
+    transform: scale(0.9);
+}
+
+.team-box-wp:hover .team-member-text-wp {
+    box-shadow: 0 5px 6px rgb(0 0 0 / 20%);
+}
+
+.team-slider-wp .slick-list {
+    padding-bottom: 17px;
+    padding-right: 450px;
+    width: calc(100% + 600px);
+}
+
+.team-slider-wp .slick-arrow {
+    top: -172px;
+    transform: translate(0, 0);
+}
+
+.team-slider-wp .slick-arrow.prev-arrow {
+    left: auto;
+    right: 110px;
+}
+
+
+/*==========Team CSS End==========*/
+
+
+/*==========Testimonial CSS Start==========*/
+
+.testimonial-back-img {
+    position: relative;
+    padding: 92px 0 292px 0;
+    background-attachment: fixed;
+}
+
+.testimonial-back-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--black-color);
+    mix-blend-mode: hue;
+    top: 0;
+    left: 0;
+}
+
+.testimonial-back-img .h4-title,
+.testimonial-back-img .h2-title {
+    color: var(--white-color);
+}
+
+.testimonial-back-img .h4-title::before,
+.testimonial-back-img .h4-title::after {
+    background: var(--white-color);
+}
+
+.testimonial-back-img .h4-title {
+    margin-bottom: 3px;
+}
+
+.testimonial-back-img .h2-title {
+    margin-bottom: 21px;
+}
+
+.testimonial-text-box {
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    padding: 30px 30px 60px;
+}
+
+.testimonial-text-box .h3-title {
+    color: var(--primary-color);
+    min-height: 60px;
+}
+
+.rating li {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.rating li:first-child {
+    margin-left: 0;
+}
+
+.rating li:last-child {
+    margin-right: 0;
+}
+
+.testimonial-text-box span {
+    display: block;
+    margin-bottom: 31px;
+}
+
+.testimonial-text p {
+    height: 150px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  
+    text-overflow: ellipsis;
+    margin-bottom: 22px;
+}
+
+.author-wp {
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0 10px 10px;
+    box-shadow: var(--box-shadow);
+    padding: 5px 0 0 30px;
+    margin: -30px 0 0 50px;
+}
+
+.people-img {
+    width: 50px;
+    height: 50px;
+    background: var(--white-color);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.people-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.author-text .h3-title {
+    margin-bottom: 0;
+}
+
+.author-text p {
+    color: var(--white-color);
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.testimonial-slider-box {
+    margin-top: -242px;
+    padding-bottom: 100px;
+}
+
+.testimonial-slider-wp .slick-arrow {
+    background: var(--primary-color);
+}
+
+.testimonial-slider-wp .slick-arrow::before {
+    background: var(--white-color);
+}
+
+.testimonial-slider-wp .slick-arrow.prev-arrow {
+    left: -95px;
+}
+
+.testimonial-slider-wp .slick-arrow.next-arrow {
+    right: -93px;
+}
+
+.testimonial-slider-wp .slick-list {
+    padding-bottom: 10px;
+}
+
+
+/*==========Testimonial CSS End==========*/
+
+
+
+
+
+
+
+/*==========Footer CSS Start==========*/
+
+.site-footer {
+    position: relative;
+    margin-top: -100px;
+}
+
+.top-footer {
+    position: relative;
+    background-color: var(--primary-color);
+    mix-blend-mode: darken;
+    padding: 292px 0 100px 0;
+    z-index: 1;
+}
+
+.top-footer::before {
+    content: "";
+    position: absolute;
+    width: 51%;
+    height: 58%;
+    background-color: var(--secondary-color);
+    mix-blend-mode: luminosity;
+    opacity: 0.20;
+    border-radius: 0 30px 30px 0;
+    top: 200px;
+    left: 0;
+}
+
+.contact-us-text-wp .h4-title,
+.contact-us-text-wp .h2-title,
+.contact-us-text p {
+    color: var(--white-color);
+}
+
+.contact-us-text-wp .h4-title {
+    margin-bottom: 3px;
+}
+
+.contact-us-text-wp .h2-title {
+    margin-bottom: 20px;
+}
+
+.contact-us-text-wp .h4-title::before,
+.contact-us-text-wp .h4-title::after {
+    background: var(--white-color);
+}
+
+.contact-us-text.overflow-text {
+    height: auto;
+    margin-bottom: 3px;
+    max-height: 100px;
+}
+
+.our-contact-wp li {
+    margin-bottom: 30px;
+}
+
+.our-contact-wp li:last-child {
+    margin-bottom: 0;
+}
+
+.our-contact-wp li a {
+    display: inline-flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.our-contact-wp li a:hover .contact-text {
+    color: var(--secondary-color);
+}
+
+.contact-text {
+    max-width: 250px;
+    color: var(--white-color);
+    transition: .3s;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+    margin-right: 20px;
+}
+
+.contact-form-wp {
+    background: var(--white-color);
+    border-radius: 30px;
+    padding: 21px 30px 35px;
+}
+
+.contact-form-wp .h2-title {
+    margin-bottom: 21px;
+}
+
+.contact-form-wp .form-control-wrap.message {
+    margin-bottom: 23px;
+}
+
+.bottom-footer {
+    position: relative;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.bottom-footer::before,
+.bottom-footer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+}
+
+.footer-design {
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0.30;
+}
+
+.footer-link .h3-title {
+    margin-bottom: 17px;
+}
+
+.footer-link li {
+    margin-bottom: 28px;
+}
+
+.footer-link li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-link li a {
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: .3s;
+}
+
+.footer-link li a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-link.navigation ul {
+    width: 100%;
+}
+
+.footer-link.navigation li {
+    width: 50%;
+    float: left;
+}
+
+.footer-link.useful-link {
+    text-align: right;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo a {
+    margin-bottom: 22px;
+}
+
+.footer-text.overflow-text {
+    height: 111px;
+    margin: 0 120px;
+}
+
+.footer-text p {
+    color: #E6E6E6;
+}
+
+.copyright {
+    position: relative;
+    padding-top: 93px;
+}
+
+.copyright-text-wp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 5px solid var(--secondary-color);
+    padding: 30px 0;
+}
+
+.copyright-text-wp p {
+    color: var(--white-color);
+    margin-bottom: 0;
+}
+
+.copyright-text-wp p a {
+    color: var(--white-color);
+    transition: .3s;
+}
+
+.copyright-text-wp p a:hover {
+    color: var(--secondary-color);
+}
+
+.social-box-wp li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.social-box-wp li:first-child {
+    margin-left: 0;
+}
+
+.social-box-wp li:last-child {
+    margin-right: 0;
+}
+
+.social-box-wp li a {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+    transition: .3s;
+    z-index: 1;
+}
+
+.social-box-wp li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: .3s;
+    z-index: -1;
+}
+
+.social-box-wp li a:hover::before {
+    transform: scale(0.9);
+}
+
+
+/*==========Footer CSS End==========*/
+
+
+/*==========Scroll To Top CSS Start==========*/
+
+.scrolltotop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 98;
+    transition: .3s;
+}
+
+.scrolltotop span {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.scrolltotop span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    transform: scale(0);
+    transition: .3s;
+}
+
+.scrolltotop span:hover {
+    color: var(--white-color);
+}
+
+.scrolltotop span:hover::after {
+    transform: scale(0.9);
+}
+
+.scrolltotop span i {
+    z-index: 1;
+}
+
+
+/*==========Scroll To Top CSS End==========*/
+
+
+/*==========Responsive Start==========*/
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media(min-width: 2100px) {
+    .container {
+        max-width: 1400px;
+    }
+    p,
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .main-navigation li a {
+        padding: 34px 0;
+    }
+    .about-us-text.overflow-text {
+        height: 231px;
+    }
+    .good-health-text p {
+        height: 58px;
+    }
+    .benefits-text.overflow-text {
+        height: 227px;
+    }
+
+    .news-text-wp li a.title {
+        height: 55px;
+    }
+    .clasees-text p {
+        margin-bottom: 10px;
+    }
+    .footer-text.overflow-text {
+        height: 88px;
+    }
+    .gallery-text-wp.overflow-text {
+        height: 154px;
+    }
+    .image-galley {
+        height: 322px;
+    }
+    .image-galley.big-img {
+        height: 673px;
+    }
+    .team-member-text-wp span {
+        min-height: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media(max-width: 1599px) {
+    .banner-slider-wp::after {
+        width: 600px;
+        height: 600px;
+        right: -150px;
+    }
+    .banner-img {
+        left: 60px;
+    }
+    .gallery-box-text-wp {
+        margin-left: 300px;
+    }
+}
+
+@media(max-width: 1499px) {
+    .header-top::before {
+        width: 100%;
+        left: 0;
+    }
+    .good-health-text {
+        max-width: 230px;
+    }
+    .health-yoga-icon {
+        margin-right: 10px;
+    }
+    .good-health-wp ul.health-right-box .health-yoga-icon {
+        margin-left: 10px;
+    }
+    .healthier-box-wp li {
+        margin: 0 10px;
+    }
+    .image-galley .hover-text {
+        padding: 0 30px 0 30px;
+    }
+    .benefits-single-img-wp {
+        width: 600px;
+        left: -100px;
+    }
+    .benefits-single-img-wp::before {
+        width: 500px;
+        height: 500px;
+        top: 185px;
+        left: 50px;
+    }
+    .gallery-box-text-wp {
+        margin-left: 150px;
+    }
+    .testimonial-text.overflow-text {
+        padding-right: 20px;
+    }
+    .yoga-health-box .health-back-design {
+        margin-left: -80px;
+    }
+}
+
+@media(max-width: 1399px) {
+    .banner-img {
+        left: 0;
+    }
+    .banner-slider-wp::after {
+        width: 500px;
+        height: 500px;
+        right: -60px;
+    }
+    .testimonial-slider-wp .slick-arrow.prev-arrow {
+        left: -70px;
+    }
+    .testimonial-slider-wp .slick-arrow.next-arrow {
+        right: -70px;
+    }
+    .news-img-box-wp {
+        left: -50px;
+    }
+}
+
+@media(max-width: 1299px) {
+    .banner-img {
+        left: -50px;
+    }
+    .banner-slider-wp::after {
+        right: 0;
+    }
+    .about-us-img-box-wp .top {
+        margin-left: 0;
+    }
+    .testimonial-slider-wp .slick-arrow {
+        top: auto;
+        bottom: -140px;
+    }
+    .testimonial-slider-wp .slick-arrow.prev-arrow {
+        left: 15px;
+    }
+    .testimonial-slider-wp .slick-arrow.next-arrow {
+        right: auto;
+        left: 125px;
+    }
+    .copyright-text-wp {
+        padding: 30px 0 100px 0;
+    }
+    .footer-design {
+        top: 0;
+    }
+}
+
+@media(max-width: 1199px) {
+    .main-navigation li {
+        padding: 0 12px;
+    }
+    .banner-img {
+        left: -160px;
+    }
+    .banner-text-wp {
+        position: relative;
+        z-index: 1;
+    }
+    .yoga-health-img-wp::before {
+        width: 300px;
+        height: 300px;
+    }
+    .yoga-health-box {
+        padding: 0 0 0 0;
+    }
+    .counting-box {
+        margin: 0 20px;
+    }
+    .classes-text-wp>p {
+        min-height: 60px;
+    }
+    .healthier-box-wp li {
+        width: 130px;
+    }
+    .gallery-box-text-wp {
+        margin-left: 20px;
+    }
+    .team-member-text-wp {
+        padding: 22px 10px 21px 10px;
+    }
+    .top-footer::before {
+        height: 63%;
+    }
+    .good-health-text {
+        max-width: 179px;
+    }
+    .yoga-health-box .health-back-design {
+        top: 0;
+        width: 180px;
+        margin-left: -85px;
+    }
+    .about-us-text.overflow-text,
+    .benefits-text.overflow-text {
+        padding-right: 20px;
+    }
+    .banner-slider .slick-arrow.prev-arrow {
+        left: 0;
+    }
+    .banner-slider .slick-arrow.next-arrow {
+        right: 0;
+    }
+    .classes-text-wp>a {
+        font-size: 20px;
+        height: 52px;
+    }
+    .testimonial-text p {
+        margin-bottom: 19px;
+    }
+    .footer-text.overflow-text {
+        margin: 0 60px;
+    }
+}
+
+@media(max-width: 991px) {
+    .for-des {
+        display: none !important
+    }
+    .for-mob {
+        display: block !important
+    }
+    .scrolltotop {
+        display: none !important;
+    }
+    .scrolltop {
+        display: none;
+    }
+    .site-header {
+        background: var(--white-color);
+        height: 80px;
+        border-bottom: 5px solid var(--primary-color);
+        box-shadow: var(--box-shadow);
+        top: 0;
+    }
+    .header-top::before {
+        display: none;
+    }
+    .site-header.sticky-head {
+        height: 75px;
+    }
+    .site-header .container {
+        max-width: 100%;
+        padding: 0;
+        height: 100%;
+    }
+    .site-header .container .row {
+        margin: 0;
+        height: 100%;
+    }
+    .site-header .col-lg-2 {
+        position: absolute;
+        width: auto;
+        top: 50%;
+        left: 30px;
+        transform: translate(0, -50%);
+        padding: 0;
+        z-index: 99;
+    }
+    .mob-phone {
+        position: absolute;
+        top: 50%;
+        right: 93px;
+        border: none;
+        outline: none !important;
+        background: var(--primary-color);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: var(--white-color);
+        border-radius: 10px;
+        transform: translate(0, -50%);
+        transition: .3s;
+        z-index: 100;
+    }
+    .mob-phone i {
+        transform: rotate( 90deg);
+    }
+    .mob-phone:hover {
+        color: var(--secondary-color);
+    }
+    .menu-toggle {
+        position: absolute;
+        top: 50%;
+        right: 23px;
+        border: none;
+        outline: none !important;
+        background: var(--primary-color);
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        transform: translate(0, -50%);
+        transition: .3s;
+        z-index: 100;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: var(--white-color);
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    .menu-toggle span:last-child {
+        margin: 0;
+    }
+    .toggled .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+    .toggled .menu-toggle span:nth-child(2) {
+        transform: rotate(-45deg);
+        margin-top: -1px;
+    }
+    .toggled .menu-toggle span:nth-child(3) {
+        opacity: 0;
+        height: 0;
+    }
+    .toggled .menu-toggle span {
+        background: var(--white-color);
+    }
+    .toggled .header-menu {
+        transform: translatey(0);
+    }
+    .toggled .menu-toggle,
+    .toggled .mob-phone {
+        background: var(--secondary-color);
+    }
+    .header-menu {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 15vh;
+        padding-left: 8vh;
+        z-index: 99;
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        overflow-y: auto;
+        transform: translatey(-100%);
+        background: var(--primary-color);
+    }
+    .mobile-menu-shep {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0.1;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    .main-navigation li {
+        display: block;
+        float: none;
+        margin: 0;
+        margin-bottom: 5vh;
+        padding: 0;
+    }
+    .main-navigation li:last-child {
+        margin-bottom: 0;
+    }
+    .main-navigation li::before,
+    .main-navigation li::after {
+        display: none;
+    }
+    .main-navigation li a {
+        display: inline-block;
+        font-size: max(16px, 2vh);
+        color: var(--white-color);
+        padding: 0;
+        transition: .3s;
+    }
+    .h2-title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .h4-title {
+        margin-bottom: 4px;
+    }
+    .main-banner {
+        background-attachment: unset !important;
+        padding: 101px 0 146px 0;
+    }
+    .banner-slider .slick-list {
+        padding-bottom: 10px;
+    }
+    .banner-slider-wp {
+        display: none;
+    }
+    .member-text-wp {
+        padding: 0 20px;
+    }
+    .about-us-sec {
+        padding: 80px 0 85px 0;
+    }
+    .about-us-img-box-wp .middle {
+        margin: -190px 0 0 370px;
+    }
+    .about-us-img-box-wp .about-us-img.bottom {
+        margin: -80px 0 0 100px;
+    }
+    .about-us-text-wp {
+        padding-top: 72px;
+    }
+    .about-us-text.overflow-text {
+        height: auto;
+        padding-right: 0;
+        margin-bottom: 7px;
+    }
+    .good-health-sec {
+        padding: 73px 0 156px 0;
+    }
+    .good-health-text {
+        max-width: 100%;
+    }
+    .good-health-sec .h2-title {
+        margin-bottom: 22px;
+    }
+    .yoga-health-img-wp {
+        text-align: center;
+        margin: 30px 0 77px 0;
+    }
+    .yoga-health-img-wp::before {
+        left: 50%;
+        margin-left: -200px;
+        width: 400px;
+        height: 400px;
+    }
+    .yoga-health-box {
+        padding: 30px 0 0 0;
+    }
+    .good-health-wp ul.health-right-box {
+        text-align: left;
+    }
+    .good-health-wp ul.health-right-box .health-yoga-icon {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .health-yoga-icon {
+        margin-right: 20px;
+    }
+    .counting-box {
+        width: 170px;
+        margin: 0 5px;
+        height: 120px;
+    }
+    .our-classes-sec {
+        padding: 72px 0 85px 0;
+    }
+    .our-classes-sec .h2-title {
+        margin-bottom: 22px;
+    }
+    .classes-box-wp {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+  
+    .classes-view-btn {
+        margin-top: 0;
+    }
+    .benefits-sec-img-box {
+        background-attachment: unset !important;
+        padding: 120px 0;
+    }
+    .benefits-sec-img-box .h2-title {
+        margin-bottom: 22px;
+    }
+    .benefits-single-img-wp {
+        width: auto;
+        left: 0;
+        top: -100px;
+    }
+    .benefits-single-img-wp::before {
+        left: 50%;
+        width: 600px;
+        height: 600px;
+        margin-left: -300px;
+        top: 100px;
+    }
+    .benefits-text-wp {
+        padding-top: 32px;
+    }
+    .benefits-text.overflow-text {
+        height: auto;
+        margin-bottom: 29px;
+        padding-right: 0;
+    }
+    .healthier-box-wp li {
+        width: 200px;
+    }
+    .healthier-box-wp {
+        margin-bottom: 23px;
+    }
+    .benfits-text-box-wp {
+        padding-bottom: 85px;
+    }
+    .gallery-img-box-wp {
+        border-radius: 0;
+        padding: 72px 0 85px 0;
+    }
+    .gallery-box-text-wp .h2-title {
+        margin-bottom: 14px;
+    }
+    .image-gallery-box {
+        padding: 30px 0 0 0;
+        margin: 0 30px;
+    }
+    .image-galley.big-img {
+        height: 400px;
+    }
+    .image-gallery-text p {
+        height: 60px;
+    }
+    .team-sec::after {
+        height: 350px;
+    }
+    .team-sec::before {
+        width: 400px;
+        height: 400px;
+    }
+    .team-sec {
+        padding: 72px 0 156px 0;
+    }
+    .team-slider-wp .slick-arrow {
+        top: auto;
+        bottom: -75px;
+    }
+    .slick-arrow {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .team-slider-wp .slick-arrow.prev-arrow,
+    .testimonial-slider-wp .slick-arrow.prev-arrow {
+        left: 50%;
+        right: auto;
+        margin-left: -70px;
+    }
+    .team-slider-wp .slick-arrow.next-arrow,
+    .testimonial-slider-wp .slick-arrow.next-arrow {
+        right: 50%;
+        left: auto;
+        margin-right: -70px;
+    }
+    .author-wp {
+        margin: -30px 0 0 30px;
+    }
+    .testimonial-back-img {
+        background-attachment: unset !important;
+        padding: 72px 0 100px 0;
+    }
+    .testimonial-slider-box {
+        margin-top: -78px;
+    }
+    .testimonial-slider-wp .slick-arrow {
+        bottom: -110px;
+    }
+    .news-sec {
+        padding: 52px 0 0 0;
+    }
+    .news-img-box-wp {
+        left: 0;
+        top: -30px;
+        width: auto;
+        text-align: center;
+        margin-bottom: 29px;
+    }
+    .news-box-top {
+        margin-top: 60px;
+    }
+    .news-text-wp {
+        max-width: 100%;
+    }
+    .news-letter-box {
+        max-width: 100%;
+        padding: 22px 20px 1px 20px;
+    }
+    .news-letter-sec {
+        margin-top: 85px;
+    }
+    .news-letter-box .h2-title {
+        margin-bottom: 21px;
+    }
+    .site-footer {
+        position: relative;
+        margin-top: -128px;
+    }
+    .top-footer::before {
+        top: 208px;
+        width: 100%;
+        height: 40%;
+        border-radius: 0;
+    }
+    .top-footer {
+        padding: 280px 0 80px 0;
+    }
+    .contact-us-text.overflow-text {
+        max-width: 100%;
+        height: auto;
+    }
+    .contact-us-text-wp {
+        margin-bottom: 30px;
+    }
+    .footer-logo {
+        text-align: left;
+        margin: 23px 0 6px 0;
+    }
+    .footer-text.overflow-text {
+        margin: 0;
+        height: auto;
+    }
+    .footer-text p {
+        margin-bottom: 20px;
+    }
+    .footer-design {
+        top: 50%;
+        margin-top: -245px;
+    }
+    .footer-link.navigation li:nth-child(7) {
+        margin-bottom: 0;
+    }
+    .footer-link.useful-link {
+        text-align: left;
+    }
+    .copyright {
+        padding-top: 22px;
+    }
+    .copyright-text-wp {
+        padding: 30px 0;
+    }
+    .bottom-footer {
+        padding-top: 74px;
+    }
+    .classes-text-wp>a {
+        height: auto;
+      
+        margin-bottom: 13px;
+    }
+    .classes-text-wp>p {
+        min-height: auto;
+    }
+    .gallery-box-text-wp {
+        margin: auto;
+    }
+    .contact-form-wp .h2-title {
+        margin-bottom: 22px;
+    }
+    .yoga-health-box .health-back-design {
+        width: auto;
+        margin-left: -95px;
+    }
+    .team-sec .h2-title {
+        margin-bottom: 42px;
+    }
+    .testimonial-text p {
+        margin-bottom: 22px;
+    }
+    .news-box-wp {
+        flex-direction: column;
+        padding: 30px 20px 28px;
+        align-items: flex-start;
+    }
+    .news-img {
+        margin-right: 0;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 29px;
+    }
+}
+
+@media(max-width: 767px) {
+    .h1-title {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 15px;
+    }
+    .main-banner {
+        padding: 77px 0 205px 0;
+    }
+    .member-text-wp {
+        display: block;
+        padding: 21px 20px 35px;
+        text-align: center;
+        height: auto;
+        margin-top: -90px;
+    }
+    .member-text-wp p {
+        margin-bottom: 20px;
+    }
+    .about-us-img-box-wp .middle {
+        margin: -70px 0 0 0;
+        text-align: right;
+    }
+    .about-us-img-box-wp .about-us-img.bottom {
+        margin: -70px 0 0 0;
+        height: 200px;
+    }
+    .about-us-text-wp {
+        padding-top: 21px;
+    }
+    .about-us-img-box-wp .top,
+    .about-us-img-box-wp .middle {
+        height: 250px;
+    }
+    .good-health-text {
+        max-width: 60%;
+    }
+    .h3-title {
+        font-size: 20px;
+    }
+    .good-health-text a .h3-title {
+        margin-bottom: 14px;
+    }
+    .counting-box-wp {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 30px 0 0 0;
+    }
+    .counting-box {
+        margin-bottom: 30px;
+    }
+    .classes-img-wp {
+        height: 350px;
+    }
+    .benefits-single-img-wp::before {
+        width: 500px;
+        height: 500px;
+        margin-left: -250px;
+    }
+    .benefits-text-wp {
+        padding-top: 49px;
+    }
+    .benefits-text.overflow-text {
+        margin-bottom: 0;
+    }
+    .healthier-box-wp li {
+        width: auto;
+        display: flex;
+        margin: 0;
+    }
+    .healthier-box-btn {
+        text-align: center;
+    }
+    .healthier-box-wp {
+        margin-bottom: 8px;
+    }
+    .team-slider-wp .slick-list {
+        padding-right: 300px;
+        width: calc(100% + 100px);
+    }
+    .news-sec::after {
+        display: none;
+    }
+    .news-img-box-wp::before {
+        left: 0;
+        width: 500px;
+        height: 500px;
+    }
+    .copyright-text-wp {
+        display: block;
+        padding: 23px 0 31px 0;
+    }
+    .copyright-text-wp p {
+        margin-bottom: 23px;
+    }
+    .clasees-text p {
+        height: 83px;
+    }
+    .classes-text-wp>p {
+        margin-bottom: 12px;
+    }
+    .testimonial-text p {
+        height: auto;
+      
+        margin-bottom: 19px;
+    }
+    .news-img {
+        margin-bottom: 27px;
+    }
+    .news-text-wp li a.title {
+        height: auto;
+       
+    }
+    .news-box-wp {
+        padding: 30px 20px 23px;
+    }
+}
+
+@media(max-width: 575px) {
+    .container,
+    .container-fluid {
+        padding: 0 30px;
+    }
+    .header-menu {
+        padding-left: 6vh;
+    }
+    .h1-title {
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 17px;
+    }
+    .main-banner {
+        padding: 58px 0 185px 0;
+    }
+    .about-us-sec {
+        padding: 40px 0 45px 0;
+    }
+    .h2-title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .h4-title {
+        margin-bottom: 5px;
+    }
+    .good-health-sec {
+        padding: 34px 0 116px 0;
+    }
+    .good-health-wp li {
+        margin-bottom: 30px;
+    }
+    .counting-box {
+        margin: 0 20px 30px 20px;
+    }
+    .our-classes-sec {
+        padding: 32px 0 45px 0;
+    }
+    .classes-img-wp {
+        height: 300px;
+    }
+    .classes-text-wp {
+        padding: 24px 25px 35px 30px;
+    }
+    .benefits-sec-img-box {
+        padding: 94px 0 105px;
+    }
+    .benefits-sec-img-box .h2-title {
+        margin-bottom: 23px;
+    }
+    .benefits-single-img-wp::before {
+        display: none;
+    }
+    .benefits-text-wp {
+        padding-top: 0;
+        margin-top: -78px;
+    }
+    .benfits-text-box-wp {
+        padding-bottom: 45px;
+    }
+    .gallery-img-box-wp {
+        padding: 35px 0 45px 0;
+    }
+    .image-galley,
+    .image-galley.big-img {
+        height: 300px;
+    }
+    .gallery-sec {
+        padding-bottom: 10px;
+    }
+    .team-sec {
+        padding: 32px 0 117px 0;
+    }
+    .team-sec .h4-title {
+        margin-bottom: 15px;
+    }
+    .team-sec .h2-title {
+        margin-bottom: 32px;
+    }
+    .team-img-wp,
+    .team-sec::after {
+        height: 300px;
+    }
+    .team-slider-wp .slick-list {
+        padding-right: 200px;
+    }
+    .scocial-icon {
+        transform: translateX(-150%);
+    }
+    .testimonial-back-img {
+        padding: 32px 0 90px 0;
+    }
+    .testimonial-back-img .h4-title {
+        margin-bottom: 17px;
+    }
+    .testimonial-text-box .h3-title {
+        min-height: auto;
+        margin-bottom: 13px;
+    }
+    .testimonial-text-box span {
+        display: block;
+        margin-bottom: 22px;
+    }
+    .testimonial-text {
+        margin-bottom: 0;
+    }
+    .news-sec {
+        padding: 12px 0 0 0;
+    }
+    .news-img-box-wp::before {
+        width: 400px;
+        height: 400px;
+    }
+    .news-letter-sec {
+        margin-top: 45px;
+    }
+    .news-letter-box .form-input {
+        padding: 0 30px;
+    }
+    .news-letter-box input[type="submit"] {
+        position: relative;
+        margin-top: 29px;
+    }
+    .site-footer {
+        margin-top: -141px;
+    }
+    .top-footer::before {
+        top: 181px;
+    }
+    .top-footer {
+        padding: 213px 0 40px 0;
+    }
+    .contact-text {
+        max-width: 300px;
+    }
+    .contact-form-wp {
+        padding: 24px 30px 35px;
+    }
+    .bottom-footer {
+        padding-top: 32px;
+    }
+    .footer-link li {
+        margin-bottom: 18px;
+    }
+    .gallery-box-text-wp {
+        padding: 0 30px;
+    }
+}
+
+@media(max-width: 480px) {
+    .about-us-img-box-wp .top,
+    .about-us-img-box-wp .middle {
+        height: 200px;
+    }
+    .about-us-img-box-wp .about-us-img.bottom {
+        height: 150px;
+    }
+    .about-us-img-box-wp img {
+        width: 200px;
+    }
+    .yoga-health-img-wp::before {
+        margin-left: -150px;
+        width: 300px;
+        height: 300px;
+    }
+    .yoga-health-img-wp {
+        margin: 30px 0 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .yoga-health-box,
+    .yoga-health-box img {
+        width: 300px
+    }
+    .yoga-health-box .health-back-design {
+        width: 150px;
+        margin-left: -72px;
+        top: 30px;
+    }
+    .yoga-health-box {
+        padding: 55px 0 0 0;
+    }
+    .h4-title {
+        padding-left: 0;
+    }
+    .h4-title::before {
+        display: none;
+    }
+    .counting-box {
+        margin: 0 10px 30px 10px;
+    }
+    .classes-img-wp {
+        height: 250px;
+    }
+    .benefits-sec-img-box {
+        padding: 75px 0 85px;
+    }
+    .benefits-single-img-wp {
+        top: -50px;
+    }
+    .benefits-text-wp {
+        margin-top: -29px;
+    }
+    .team-slider-wp .slick-list {
+        padding-right: 0;
+        width: 100%;
+    }
+    .footer-text p {
+        margin-bottom: 23px;
+    }
+    .benefits-text-wp::before {
+        left: 0;
+        top: 0;
+    }
+}
+
+@media(max-width: 450px) {
+    .banner-btn .sec-btn+.sec-btn {
+        margin: 30px 0 0 0;
+    }
+    .banner-btn {
+        padding-right: 50px;
+    }
+    .contact-text {
+        max-width: 280px;
+    }
+    .news-img-box-wp::before {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media(max-width: 400px) {
+    .container,
+    .container-fluid {
+        padding: 0 15px;
+    }
+    .site-header .col-lg-2 {
+        left: 15px;
+    }
+    .menu-toggle {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+    }
+    .menu-toggle span {
+        width: 25px;
+    }
+    .mob-phone {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        right: 75px;
+    }
+    .h1-title {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 18px;
+    }
+    .health-yoga-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .gallery-box-text-wp {
+        padding: 0 15px;
+    }
+    .gallery-text-wp.overflow-text {
+        height: 174px;
+    }
+    .image-gallery-box {
+        margin: 30px auto 0;
+        padding: 0 15px;
+    }
+    .image-galley,
+    .image-galley.big-img {
+        height: 250px;
+    }
+    .testimonial-text-box .h3-title {
+        min-height: 60px;
+    }
+    .news-img-box-wp::before {
+        display: none;
+    }
+    .contact-form-wp {
+        padding: 24px 15px 35px;
+    }
+    .contact-text {
+        max-width: 230px;
+    }
+    .people-img {
+        margin-right: 10px;
+    }
+    .author-text .h3-title {
+        font-size: 18px;
+    }
+    .h4-title::after {
+        display: none;
+    }
+    .classes-text-wp {
+        padding: 13px 20px 24px 20px;
+    }
+    .header-menu {
+        padding-left: 4vh;
+    }
+    .about-us-img-box-wp .top,
+    .about-us-img-box-wp .middle,
+    .about-us-img-box-wp .about-us-img.bottom {
+        animation: unset;
+    }
+}
+
+
+/*==========Responsive End==========*/
